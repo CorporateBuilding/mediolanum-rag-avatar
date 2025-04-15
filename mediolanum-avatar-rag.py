@@ -1,18 +1,5 @@
 import streamlit as st
-import tempfile
-import os
 import time
-import conf
-from qdrant_client import QdrantClient
-from qdrant_client.http import models
-from langchain_openai import AzureOpenAIEmbeddings
-from openai import AzureOpenAI
-# from ragUpload.extractText.textProcessing import extractDataFromDir
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-import re
-import tiktoken
-from PyPDF2 import PdfReader
-import datetime
 
 import graph.automataSummarizer as aut
 import agents.agents as ag
