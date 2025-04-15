@@ -116,9 +116,12 @@ if __name__ == "__main__":
                         status_placeholder = st.empty()
                         path = ""
                         i=1
+                        video_path = "video"
 
                         while True:
-                            path = ag.checkVideo("video", id_video)
+                            import os
+                            os.makedirs(video_path, exist_ok=True)  # Crea el directorio si no existe
+                            path = ag.checkVideo(video_path, id_video)
 
                             if path != -1 and path != -2:
                                 break
