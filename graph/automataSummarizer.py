@@ -7,15 +7,11 @@
 
 
 from qdrant_client import QdrantClient
-from qdrant_client.http import models
 from qdrant_client import QdrantClient
 from langchain_openai import AzureOpenAIEmbeddings
 from openai import AzureOpenAI
-# from extractText.textProcessing import extractPdfsFromDir
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 import conf
-import os
 import tiktoken
 import re
 
@@ -185,7 +181,6 @@ def generate_questions_response(query, info, client):
 # In[231]:
 
 
-from langgraph.types import Command, interrupt
 from typing_extensions import TypedDict
 from typing import List, Dict
 import json
@@ -660,10 +655,8 @@ def checkLenght(state: State):
 # In[239]:
 
 
-from langchain_core.messages import AnyMessage
 from typing_extensions import TypedDict
 from langgraph.graph import StateGraph, START, END
-from IPython.display import Image, display
 
 
 # Build workflow
