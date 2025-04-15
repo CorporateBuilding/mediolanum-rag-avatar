@@ -1,5 +1,4 @@
 ﻿altair==5.5.0
-annotated-types==0.7.0
 audioop-lts==0.2.1
 audioread==3.0.1
 azure-ai-documentintelligence==1.0.0
