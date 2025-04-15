@@ -126,6 +126,9 @@ if __name__ == "__main__":
 
                             if path != -1 and path != -2:
                                 break
+                            elif path == -3:
+                                st.write("NO QUEDAN CREDITOS PARA MÁS VÍDEOS")
+
 
 
                             status_placeholder.write(f"Llamando al agente" + "."*(i%4))
