@@ -91,5 +91,8 @@ def checkVideo(relPath: str, id: str):
 
     else:
         print(status)
-        return -1
+        if status == "failed":
+            return -3
+        else:
+            return -1
     
