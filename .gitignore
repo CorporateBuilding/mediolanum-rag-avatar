@@ -1,0 +1,9 @@
+.streamlit
+
+.venvMediolanum
+
+.vscode
+
+__pycache__
+
+*.mp4
