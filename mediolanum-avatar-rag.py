@@ -89,7 +89,10 @@ if __name__ == "__main__":
                     text = aut.generateBigResponse(query, tiempo)
 
                     st.markdown(text)
-                    text = text[:1750]
+
+                    maxLen = 750
+                    text = text[:maxLen]
+                    exit()
                     # # st.session_state['messages'].append({"role": "assistant", "content": response})
                 except Exception as e:
                     error_msg = f"Error al generar respuesta: {str(e)}"
