@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
                     maxLen = 750
                     text = text[:maxLen]
-                    exit()
+
                     # # st.session_state['messages'].append({"role": "assistant", "content": response})
                 except Exception as e:
                     error_msg = f"Error al generar respuesta: {str(e)}"
@@ -127,22 +127,25 @@ if __name__ == "__main__":
 
                             path = ag.checkVideo(video_path, id_video)
 
-                            if path != -1 and path != -2:
-                                break
-                            elif path == -3:
+                            if path == -3 or path == -2:
+                                st.write(f"Error generando vídeo")
                                 st.write("NO QUEDAN CREDITOS PARA MÁS VÍDEOS")
-
-
+                                break
+                            elif patpath != -1:
+                                break
 
                             status_placeholder.write(f"Llamando al agente" + "."*(i%4))
 
-                            time.sleep(5)
+                            time.sleep(4)
                             i=i+1
                         
                         FILEPATH = path
 
-                        status.update(label="¡Curso generado!", state="complete", expanded=False)
-                        st.session_state['messages'].append({"role": "assistant", "content": FILEPATH})    
+                        if path == -1 or path == -2 or path == -3:
+                            status.update(label="Error con el curso!", state="error", expanded=False)
+                        else:
+                            status.update(label="¡Curso generado!", state="complete", expanded=False)
+                            st.session_state['messages'].append({"role": "assistant", "content": FILEPATH})    
 
             with st.chat_message("assistant"):
                 st.video(FILEPATH, format="video/mp4", autoplay=True, muted=False)
