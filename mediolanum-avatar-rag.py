@@ -131,7 +131,7 @@ if __name__ == "__main__":
                                 st.write(f"Error generando vídeo")
                                 st.write("NO QUEDAN CREDITOS PARA MÁS VÍDEOS")
                                 break
-                            elif patpath != -1:
+                            elif path != -1:
                                 break
 
                             status_placeholder.write(f"Llamando al agente" + "."*(i%4))
